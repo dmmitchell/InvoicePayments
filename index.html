@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Invoice Payment | TouchNet</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" media="all">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="https://www.touchnet.com/">
+            <img src="img/touchnet-logo-gp.svg" alt="TouchNet, A Global Payments Company">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="flex-shrink-0">
+      <div class="banner"></div>
+      <div class="container">
+        <form method="POST" action="https://secure.touchnet.com/C26393_upay/web/index.jsp">
+          <div class="row">
+            <h1>Invoice Payment</h1>
+            <!-- Parameters to Populate uPay Site -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Cardholder Name</label>
+                <input class="form-control" type="text" name="BILL_NAME" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Cardholder Email</label>
+                <input class="form-control" type="email" name="BILL_EMAIL_ADDRESS" value="">
+              </div>
+            </div>
+            <!-- Parameters Requested by Finance -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Institution</label>
+                <input class="form-control" type="text" name="INSTITUTION" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Invoice Number(s)</label>
+                <input class="form-control" type="text" name="INVOICE_NUMBER" value="">
+              </div>
+            </div>
+            <!-- Total to Pay (HTML5 Form Validation)-->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Total Amount</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">$</div>
+                    </div>
+                    <input class="form-control" type="number" step="any" name="AMT" value="" placeholder="0.00">
+                  </div>
+              </div>
+            </div>
+            <!-- Submit Button-->
+            <div class="col-md-12">
+              <div class="input-group">
+                <!--uPay Site ID for Project (In C26393) -->
+                <input class="form-control" type="hidden" name="UPAY_SITE_ID" value="2">
+                <!-- Submit Form -->
+                <input class="btn" type="submit" value="Pay Now">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p> &copy; 2022 TouchNet Information Systems, Inc. <span class="inline">All rights reserved</span></p>
+            <a target="_blank" href="https://www.touchnet.com/privacy-policy">Privacy Policy</a>
+            <a target="_blank" href="https://www.touchnet.com/end-user-privacy-notice">End User Privacy Notice</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
