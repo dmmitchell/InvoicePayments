@@ -116,6 +116,9 @@ input.form-control:focus{
   box-shadow: 0 0 2px #510c76;
   transition: all 0.5s ease;
 }
+.form-select{
+  padding:10px 15px;
+}
 /* --------- //
 // Buttons
 // --------- */
@@ -142,6 +145,7 @@ input.form-control:focus{
 .btn:active {
   background: #310748;
 }
+
 /*
 --------------------------------------------------------------//
 ///// Media Queries
